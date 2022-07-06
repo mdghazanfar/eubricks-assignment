@@ -1,0 +1,22 @@
+{
+  "name": "eubrics",
+  "version": "1.0.0",
+  "description": "eubrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:frontend": "npm run start --prefix frontend",
+    "dev:backend": "npm run start --prefix backend",
+    "install:frontend": "npm install --prefix frontend",
+    "install:backend": "npm install --prefix backend",
+    "start": "run-p dev:backend  dev:frontend",
+    "install:all": "npm install npm-run-all && run-p install:backend  install:frontend",
+    "dbscript": "ts-node server/src/dbscript/populateEntries.ts"
+  },
+  "repository": "",
+  "author": "mdghazanfar <ghazanfaralam642786@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
